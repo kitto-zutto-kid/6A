@@ -1,0 +1,42 @@
+html {
+	font-size: calc(100vw * 16 / 375);
+	background: linear-gradient(rgb(0, 194, 0), rgb(0, 163, 0));
+	font-family: serif;
+}
+
+img {
+	width: 22.5rem;
+	height: auto;
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+#title {
+	font-weight: bold;
+	color:rgba(0,0,0,.0);
+	text-align:center;
+	-webkit-text-stroke: 1px #FFF;
+	text-align: center;
+	font-size: 2.5rem;
+}
+
+#detail {
+	text-align: center;
+	font-size: 0.75rem;
+	display: inline-block;
+	background-color: rgb(150, 200, 0);
+	border-radius: 8px;
+	padding: 0.4rem 0.2rem;
+}
+
+
+#footer {
+	text-align: center;
+	font-size: 0.9rem;
+	box-shadow: 2px 2px 4px;
+	background-color: rgb(24, 175, 209);
+}
+
+#access {
+	padding-top: 10vw;
+	padding-bottom: 6vw;
+}
