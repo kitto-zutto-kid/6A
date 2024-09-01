@@ -32,12 +32,15 @@ update();
 function update() {
 	now = (now + N) % N;
 	const imgElement = document.querySelector("#member img");
+	const button = document.querySelector("#navigation-buttons");
+	button.disabled = true;
 	imgElement.src = `img/cast/${order[now] + 1}.jpg`;
 	imgElement.onload = function() {
 		document.querySelector("#member span").innerHTML = person[order[now]];
 		document.querySelector("#member p").innerHTML = intro[now];
 		document.querySelector("#navigation-buttons p").innerHTML = `${now + 1}/${N}`
 		imgElement.alt = person[order[now]];
+		button.disabled = false;
 	};
 }
 

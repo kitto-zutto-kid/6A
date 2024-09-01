@@ -64,6 +64,11 @@ p {
 	width: 17.5rem;
 }
 
+#navigation-buttons:disabled {
+	background-color: #ccc;
+	cursor: not-allowed;
+}
+
 #left-button, #right-button {
 	background-color: transparent;
 	border: none;
