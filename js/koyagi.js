@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		}).then(function (canvas) {
 			var link = document.createElement('a');
 			link.href = canvas.toDataURL("image/png", 1.0);
-			link.download = 'composed_image.png';
+			link.download = 'koyagi.png';
 			link.click();
 		}).catch(function (error) {
 			console.error("Error occurred while capturing the image:", error);
