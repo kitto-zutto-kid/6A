@@ -4,14 +4,82 @@ html {
 	font-family: serif;
 }
 
-img {
+p {
+	color: rgba(163,196,117,1);
+}
+
+#logo img {
 	width: 22.5rem;
 	height: auto;
 	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
-p {
+#member {
+	text-align: center;
+}
+
+#member p {
+	font-size: 1.1rem;
+	text-align: left;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem; 
+}
+
+#member img {
+	width: 20rem;
+	height: auto;
+	border-radius: 10px;
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+#member h2 {
 	color: rgba(163,196,117,1);
+	position: relative;
+	text-align: center;
+}
+
+#member h2:before {
+	position: absolute;
+	top: 1rem;
+	left: 0;
+	width: 100%;
+	height: 0.1rem;
+	content: '';
+	background: #b84141;
+}
+
+#member h2 span {
+	position: relative;
+	padding: 0 1rem;
+	background: rgba(32,69,55,1);
+}
+
+#navigation-buttons {
+	position: fixed;
+	bottom: 1rem;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	justify-content: space-between;
+	width: 17.5rem;
+}
+
+#left-button, #right-button {
+	background-color: transparent;
+	border: none;
+	font-size: 3rem;
+	cursor: pointer;
+	outline: none;
+	color: #ffffff;
+	padding: 0;
+	position: relative;
+}
+
+.button-text {
+	display: block;
+	font-size: 0.7rem;
+	color: #ffffff;
+	text-align: center;
 }
 
 #title {
