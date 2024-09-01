@@ -171,16 +171,12 @@ header img {
 }
 
 #koyagi {
+	position: absolute;
+	top: 0;
 	text-align: center;
-	
 }
 
 #koyagi img {
-	width: 20rem;
-	height: auto;
-}
-
-#board {
+	width: 22.5rem;
 	position: absolute;
-	top: rem;
 }
