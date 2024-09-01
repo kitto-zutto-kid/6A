@@ -9,4 +9,4 @@ https://kitto-zutto-kid.github.io/6A/
 
 このページに辿り着いたということは，多少は Web 開発に詳しい人だと思われるので，備忘録を残そうと思いましたが，何も思いつかなかったのでここで終わりにします。
 
-質問などは @achapi_kyopuro
+質問などは @achapi_kyopuro まで
