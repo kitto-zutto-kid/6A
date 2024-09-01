@@ -30,11 +30,11 @@ document.addEventListener("DOMContentLoaded", function() {
 			"tsuno": "ツノ",
 			"hidume": "ヒヅメ",
 			"sippo": "しっぽ",
-			"kubiwa": "kubiwa",
+			"kubiwa": "首輪",
 			"accessory": "アクセサリー",
 		};
 		Object.keys(partsData).forEach((category, index) => {
-			if (category === "senga") return; // Skip "senga"
+			if (category === "senga") return;
 
 			const partCategory = document.createElement('div');
 			partCategory.className = 'part-category';
@@ -50,21 +50,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
 		partSelector.appendChild(partCategoryContainer);
 
-		// Open the default category
 	}
 
 	function displayPartOptions(category) {
-		// Hide all part options
 		document.querySelectorAll('.part-options').forEach(container => {
 			container.style.display = 'none';
 		});
 
-		// Hide all part categories
 		document.querySelectorAll('.part-category').forEach(categoryElement => {
 			categoryElement.style.backgroundColor = '#e0e0e0';
 		});
 
-		// Show the selected category's part options
 		let partOptionsContainer = document.querySelector(`.part-options[data-category="${category}"]`);
 		if (partOptionsContainer) {
 			partOptionsContainer.style.display = 'flex';
@@ -86,7 +82,6 @@ document.addEventListener("DOMContentLoaded", function() {
 			partSelector.appendChild(partOptionsContainer);
 		}
 
-		// Highlight the selected category
 		const selectedCategory = document.querySelector(`.part-category[data-part="${category}"]`);
 		if (selectedCategory) {
 			selectedCategory.style.backgroundColor = '#d0d0d0';
@@ -94,7 +89,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	}
 
 	function updatePreview(category, file) {
-		// カテゴリーごとの z-index を定義
 		const zIndexMap = {
 			"taishoku": 1,
 			"me": 2,
@@ -109,33 +103,27 @@ document.addEventListener("DOMContentLoaded", function() {
 			"accessory": 11
 		};
 	
-		// Get existing images from the preview
 		const existingImages = Array.from(composed.getElementsByTagName('img'));
-	
-		// Remove images related to the current category
+
 		existingImages.forEach(img => {
 			if (img.dataset.category === category) {
 				img.remove();
 			}
 		});
-	
-		// Add the new image for the selected category
+
 		const newImage = document.createElement('img');
 		newImage.src = `img/koyagi/${category}/${file}`;
 		newImage.alt = file;
 		newImage.dataset.category = category;
-		newImage.style.zIndex = zIndexMap[category] || 0; // Default to 0 if category not found
+		newImage.style.zIndex = zIndexMap[category] || 0;
 		composed.appendChild(newImage);
 	}
 	
 
-	// Generate the part selector UI
 	generatePartSelector();
 
-	// Set default image for senga
 	updatePreview("senga", "1.PNG");
 
-	// Open all part options
 	displayPartOptions("taishoku");
 	displayPartOptions("me");
 	displayPartOptions("mayu");
@@ -161,7 +149,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	updatePreview("kubiwa", "1.PNG");
 	updatePreview("accessory", "1.PNG");
 
-	// Save button functionality
 	document.getElementById("saveButton").addEventListener("click", function() {
 		html2canvas(composed, {
 			backgroundColor: "#FFFFFF",

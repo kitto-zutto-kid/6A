@@ -17,36 +17,26 @@
 			<img src="img/icon-192x192.png" alt="トップページに戻る" id="logo">
 		</a>
 	</header>
-
+	<div id="kanban">
+		<img src="img/koyagi/kanban.PNG">
+	</div>
+	<div id="board">
+		<img src="img/koyagi/board.PNG">
+	</div>
 	<div id="preview">
-        <h2>プレビュー</h2>
-        <div id="composed">
-            <!-- 組み合わせたパーツがここに表示されます -->
-        </div>
-    </div>
+		<div id="composed">
 
-    <div id="partSelector">
-        <!-- パーツカテゴリがここに動的に追加されます -->
-    </div>
+		</div>
+	</div>
+
+	<div id="partSelector">
+
+	</div>
 
 
-	<button id="saveButton">画像として保存</button>
+	<button id="saveButton">画像にして保存</button>
 
 	<script src="js/koyagi.js"></script>
-
-	<!-- <script>
-		document.getElementById("saveButton").addEventListener("click", function () {
-			html2canvas(document.getElementById("koyagi"), {
-				backgroundColor: "#204537",
-				scale: 4
-			}).then(function (canvas) {
-				var link = document.createElement('a');
-				link.href = canvas.toDataURL();
-				link.download = 'koyagi.png';
-				link.click();
-			});
-		});
-	</script> -->
 </body>
 
 </html>
