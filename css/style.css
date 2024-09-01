@@ -8,6 +8,19 @@ p {
 	color: rgba(163,196,117,1);
 }
 
+header {
+	position: absolute;
+	top: 0.2rem;
+	left: 0.2rem;
+	z-index: 1000;
+}
+
+#logo {
+	width: 3.5rem;
+	border-radius: 1rem;
+	height: auto; 
+}
+
 #logo img {
 	width: 22.5rem;
 	height: auto;
@@ -26,9 +39,9 @@ p {
 }
 
 #member img {
-	width: 20rem;
+	width: 21rem;
 	height: auto;
-	border-radius: 10px;
+	border-radius: 1rem;
 	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
