@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
 	const partsData = {
 		"taishoku": Array.from({ length: 20 }, (_, i) => `${i + 1}.PNG`),
 		"me": Array.from({ length: 11 }, (_, i) => `${i + 1}.PNG`),
@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"mimi": Array.from({ length: 40 }, (_, i) => `${i + 1}.PNG`),
 		"kuchi": Array.from({ length: 7 }, (_, i) => `${i + 1}.PNG`),
 		"hoho": Array.from({ length: 4 }, (_, i) => `${i + 1}.PNG`),
-		"tsuno": Array.from({ length: 7 }, (_, i) => `${i + 1}.PNG`),
+		"tsuno": Array.from({ length: 6 }, (_, i) => `${i + 1}.PNG`),
 		"hidume": Array.from({ length: 4 }, (_, i) => `${i + 1}.PNG`),
 		"sippo": Array.from({ length: 40 }, (_, i) => `${i + 1}.PNG`),
 		"kubiwa": Array.from({ length: 6 }, (_, i) => `${i + 1}.PNG`),
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			"kubiwa": "首輪",
 			"accessory": "アクセサリー",
 		};
-		Object.keys(partsData).forEach((category, index) => {
+		Object.keys(partsData).forEach(category => {
 			if (category === "senga") return;
 
 			const partCategory = document.createElement('div');
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			partCategory.dataset.part = category;
 			partCategory.textContent = name[category];
 
-			partCategory.addEventListener('click', function() {
+			partCategory.addEventListener('click', function () {
 				displayPartOptions(category);
 			});
 
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function() {
 				const img = document.createElement('img');
 				img.src = `img/koyagi/${category}/${file}`;
 				img.alt = file;
-				img.addEventListener('click', function() {
+				img.addEventListener('click', function () {
 					updatePreview(category, file);
 				});
 				partOptionsContainer.appendChild(img);
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			"kubiwa": 10,
 			"accessory": 11
 		};
-	
+
 		const existingImages = Array.from(composed.getElementsByTagName('img'));
 
 		existingImages.forEach(img => {
@@ -118,47 +118,31 @@ document.addEventListener("DOMContentLoaded", function() {
 		newImage.style.zIndex = zIndexMap[category] || 0;
 		composed.appendChild(newImage);
 	}
-	
+
 
 	generatePartSelector();
 
-	updatePreview("senga", "1.PNG");
+	Object.keys(partsData).forEach(category => {
+		if (category === "senga") return;
+		displayPartOptions(category);
+	});
 
 	displayPartOptions("taishoku");
-	displayPartOptions("me");
-	displayPartOptions("mayu");
-	displayPartOptions("mimi");
-	displayPartOptions("kuchi");
-	displayPartOptions("hoho");
-	displayPartOptions("tsuno");
-	displayPartOptions("hidume");
-	displayPartOptions("sippo");
-	displayPartOptions("kubiwa");
-	displayPartOptions("accessory");
-	displayPartOptions("taishoku");
 
-	updatePreview("taishoku", "1.PNG");
-	updatePreview("me", "1.PNG");
-	updatePreview("mayu", "1.PNG");
-	updatePreview("mimi", "1.PNG");
-	updatePreview("kuchi", "1.PNG");
-	updatePreview("hoho", "1.PNG");
-	updatePreview("tsuno", "1.PNG");
-	updatePreview("hidume", "1.PNG");
-	updatePreview("sippo", "1.PNG");
-	updatePreview("kubiwa", "1.PNG");
-	updatePreview("accessory", "1.PNG");
+	Object.keys(partsData).forEach(category => {
+		updatePreview(category, `${partsData[category][Math.floor(Math.random() * partsData[category].length)]}`);
+	});
 
-	document.getElementById("saveButton").addEventListener("click", function() {
+	document.getElementById("saveButton").addEventListener("click", function () {
 		html2canvas(composed, {
 			backgroundColor: "#FFFFFF",
 			scale: 2
-		}).then(function(canvas) {
+		}).then(function (canvas) {
 			var link = document.createElement('a');
 			link.href = canvas.toDataURL("image/png", 1.0);
 			link.download = 'composed_image.png';
 			link.click();
-		}).catch(function(error) {
+		}).catch(function (error) {
 			console.error("Error occurred while capturing the image:", error);
 		});
 	});

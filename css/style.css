@@ -1,11 +1,11 @@
 html {
 	font-size: calc(100vw * 16 / 375);
-	background-color: rgba(32,69,55,1);
+	background-color: rgba(32, 69, 55, 1);
 	font-family: serif;
 }
 
 p {
-	color: rgba(163,196,117,1);
+	color: rgba(163, 196, 117, 1);
 }
 
 header {
@@ -22,7 +22,9 @@ header img {
 	height: auto;
 }
 
-#sokanzu, #detail, #logo{
+#sokanzu,
+#detail,
+#logo {
 	text-align: center;
 }
 
@@ -40,8 +42,8 @@ header img {
 
 #title {
 	font-weight: bold;
-	color:rgba(0,0,0,.0);
-	text-align:center;
+	color: rgba(0, 0, 0, .0);
+	text-align: center;
 	-webkit-text-stroke: 1px #39c044;
 	text-align: center;
 	font-size: 2rem;
@@ -105,7 +107,7 @@ header img {
 	font-size: 1.1rem;
 	text-align: left;
 	padding-left: 0.5rem;
-	padding-right: 0.5rem; 
+	padding-right: 0.5rem;
 }
 
 #member img {
@@ -116,7 +118,7 @@ header img {
 }
 
 #member h2 {
-	color: rgba(163,196,117,1);
+	color: rgba(163, 196, 117, 1);
 	position: relative;
 	text-align: center;
 }
@@ -134,7 +136,7 @@ header img {
 #member h2 span {
 	position: relative;
 	padding: 0 1rem;
-	background: rgba(32,69,55,1);
+	background: rgba(32, 69, 55, 1);
 }
 
 #navigation-buttons {
@@ -170,7 +172,8 @@ header img {
 	text-align: center;
 }
 
-#kanban, #board {
+#kanban,
+#board {
 	text-align: center;
 	position: absolute;
 	top: 0;
@@ -179,7 +182,8 @@ header img {
 	z-index: -114514;
 }
 
-#kanban img, #board img {
+#kanban img,
+#board img {
 	width: 21rem;
 }
 

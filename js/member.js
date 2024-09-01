@@ -1,5 +1,5 @@
 person = [
-	"メイ","ソウタ","カンナ","ムツミ","ロン","ミナコ","ウサミ","やよい","センセー","アヤネ","稲葉","サラ","ナオト"
+	"メイ", "ソウタ", "カンナ", "ムツミ", "ロン", "ミナコ", "ウサミ", "やよい", "センセー", "アヤネ", "稲葉", "サラ", "ナオト"
 ]
 
 order = [
@@ -33,7 +33,7 @@ function update() {
 	const button = document.querySelectorAll(".button");
 	button.forEach(e => e.disabled = true);
 	imgElement.src = `img/cast/${order[now] + 1}.jpg`;
-	imgElement.onload = function() {
+	imgElement.onload = function () {
 		document.querySelector("#member span").innerHTML = person[order[now]];
 		document.querySelector("#member p").innerHTML = intro[now];
 		document.querySelector("#navigation-buttons p").innerHTML = `${now + 1}/${N}`
@@ -42,13 +42,13 @@ function update() {
 	};
 }
 
-function goLeft(){
+function goLeft() {
 	now--;
 	update();
 }
 
 
-function goRight(){
+function goRight() {
 	now++;
 	update();
 }
