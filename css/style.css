@@ -11,20 +11,69 @@ p {
 header {
 	position: absolute;
 	top: 0.2rem;
-	left: 0.2rem;
+	right: 0.2rem;
 	z-index: 1000;
 }
 
-#logo {
+header img {
+	text-align: center;
 	width: 3.5rem;
 	border-radius: 1rem;
-	height: auto; 
+	height: auto;
+}
+
+#sokanzu, #detail, #logo{
+	text-align: center;
+}
+
+#logo {
+	top: 1rem;
 }
 
 #logo img {
-	width: 22.5rem;
+	width: 21rem;
+	height: auto;
+	border-radius: 0.5rem;
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+
+#title {
+	font-weight: bold;
+	color:rgba(0,0,0,.0);
+	text-align:center;
+	-webkit-text-stroke: 1px #39c044;
+	text-align: center;
+	font-size: 2rem;
+}
+
+
+#sokanzu img {
+	width: 20rem;
 	height: auto;
 	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+#detail p {
+	text-align: center;
+	font-size: 0.75rem;
+	display: inline-block;
+
+	border-radius: 8px;
+	padding: 0.4rem 0.2rem;
+}
+
+
+#footer {
+	text-align: center;
+	font-size: 0.9rem;
+	box-shadow: 2px 2px 4px;
+	;
+}
+
+#access {
+	padding-top: 10vw;
+	padding-bottom: 6vw;
 }
 
 #member {
@@ -98,35 +147,4 @@ header {
 	font-size: 0.7rem;
 	color: #ffffff;
 	text-align: center;
-}
-
-#title {
-	font-weight: bold;
-	color:rgba(0,0,0,.0);
-	text-align:center;
-	-webkit-text-stroke: 1px #FFF;
-	text-align: center;
-	font-size: 2.5rem;
-}
-
-#detail {
-	text-align: center;
-	font-size: 0.75rem;
-	display: inline-block;
-	background-color: rgb(150, 200, 0);
-	border-radius: 8px;
-	padding: 0.4rem 0.2rem;
-}
-
-
-#footer {
-	text-align: center;
-	font-size: 0.9rem;
-	box-shadow: 2px 2px 4px;
-	;
-}
-
-#access {
-	padding-top: 10vw;
-	padding-bottom: 6vw;
 }
