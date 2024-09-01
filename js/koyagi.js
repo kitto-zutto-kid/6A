@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	document.getElementById("saveButton").addEventListener("click", function () {
 		html2canvas(composed, {
 			backgroundColor: "#FFFFFF",
-			scale: 2
+			scale: 4
 		}).then(function (canvas) {
 			var link = document.createElement('a');
 			link.href = canvas.toDataURL("image/png", 1.0);
