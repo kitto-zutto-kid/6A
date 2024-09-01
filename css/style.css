@@ -169,3 +169,18 @@ header img {
 	color: #ffffff;
 	text-align: center;
 }
+
+#koyagi {
+	text-align: center;
+	
+}
+
+#koyagi img {
+	width: 20rem;
+	height: auto;
+}
+
+#board {
+	position: absolute;
+	top: rem;
+}
