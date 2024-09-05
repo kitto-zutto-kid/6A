@@ -43,6 +43,7 @@ header img {
 	padding: 0.5rem 0rem;
 	width: 21rem;
 	height: auto;
+	filter: invert(81%) sepia(81%) saturate(633%) hue-rotate(359deg) brightness(66%) contrast(105%) drop-shadow(0rem 0rem 2rem white);
 }
 
 
