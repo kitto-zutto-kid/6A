@@ -28,10 +28,6 @@ header img {
 	text-align: center;
 }
 
-#logo {
-	top: 1rem;
-}
-
 #logo img {
 	width: 21rem;
 	height: auto;
@@ -39,14 +35,14 @@ header img {
 	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
-
 #title {
-	font-weight: bold;
-	color: rgba(0, 0, 0, .0);
 	text-align: center;
-	-webkit-text-stroke: 1px #39c044;
-	text-align: center;
-	font-size: 2rem;
+}
+
+#title img {
+	padding: 0.5rem 0rem;
+	width: 21rem;
+	height: auto;
 }
 
 
@@ -60,7 +56,6 @@ header img {
 	text-align: center;
 	font-size: 0.75rem;
 	display: inline-block;
-
 	border-radius: 8px;
 	padding: 0.4rem 0.2rem;
 }
@@ -107,7 +102,7 @@ header img {
 }
 
 #member p {
-	font-size: 1.1rem;
+	font-size: 0.9rem;
 	text-align: left;
 	padding-left: 0.5rem;
 	padding-right: 0.5rem;
