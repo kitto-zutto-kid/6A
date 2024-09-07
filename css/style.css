@@ -86,6 +86,12 @@ header img {
 	margin-bottom: 1rem;
 }
 
+#link-button p {
+	text-align: left;
+	margin-top: -0.5rem;
+	font-size: 0.75rem;
+}
+
 
 #footer {
 	text-align: center;
