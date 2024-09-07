@@ -22,7 +22,6 @@ header img {
 	height: auto;
 }
 
-#sokanzu,
 #detail,
 #logo {
 	text-align: center;
@@ -46,9 +45,14 @@ header img {
 	filter: invert(81%) sepia(81%) saturate(633%) hue-rotate(359deg) brightness(66%) contrast(105%);
 }
 
+#sokanzu {
+	margin-bottom: 13rem;
+}
 
 #sokanzu img {
-	width: 22rem;
+	text-align: center;
+	position: absolute;
+	width: 21rem;
 	height: auto;
 }
 
