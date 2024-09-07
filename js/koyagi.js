@@ -6,11 +6,12 @@ document.addEventListener("DOMContentLoaded", function () {
 		"mimi": Array.from({ length: 40 }, (_, i) => `${i + 1}.PNG`),
 		"kuchi": Array.from({ length: 7 }, (_, i) => `${i + 1}.PNG`),
 		"hoho": Array.from({ length: 4 }, (_, i) => `${i + 1}.PNG`),
-		"tsuno": Array.from({ length: 6 }, (_, i) => `${i + 1}.PNG`),
+		"tsuno": Array.from({ length: 8 }, (_, i) => `${i + 1}.PNG`),
 		"hidume": Array.from({ length: 4 }, (_, i) => `${i + 1}.PNG`),
 		"sippo": Array.from({ length: 40 }, (_, i) => `${i + 1}.PNG`),
-		"kubiwa": Array.from({ length: 6 }, (_, i) => `${i + 1}.PNG`),
-		"accessory": Array.from({ length: 3 }, (_, i) => `${i + 1}.PNG`),
+		"kubiwa": Array.from({ length: 17 }, (_, i) => `${i + 1}.PNG`),
+		"accessory": Array.from({ length: 10 }, (_, i) => `${i + 1}.PNG`),
+		"haikei": Array.from({ length: 10 }, (_, i) => `${i + 1}.PNG`),
 		"senga": ["1.PNG"]
 	};
 
@@ -32,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			"sippo": "しっぽ",
 			"kubiwa": "首輪",
 			"accessory": "アクセサリー",
+			"haikei": "背景",
 		};
 		Object.keys(partsData).forEach(category => {
 			if (category === "senga") return;
@@ -100,7 +102,8 @@ document.addEventListener("DOMContentLoaded", function () {
 			"hidume": 8,
 			"sippo": 9,
 			"kubiwa": 10,
-			"accessory": 11
+			"accessory": 11,
+			"haikei": 0
 		};
 
 		const existingImages = Array.from(composed.getElementsByTagName('img'));
@@ -143,7 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			link.download = 'koyagi.png';
 			link.click();
 		}).catch(function (error) {
-			console.error("Error occurred while capturing the image:", error);
+			alert("保存に失敗しました。別のブラウザで開いてください。")
 		});
 	});
 });
