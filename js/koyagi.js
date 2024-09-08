@@ -9,9 +9,9 @@ document.addEventListener("DOMContentLoaded", function () {
 		"tsuno": Array.from({ length: 8 }, (_, i) => `${i + 1}.PNG`),
 		"hidume": Array.from({ length: 4 }, (_, i) => `${i + 1}.PNG`),
 		"sippo": Array.from({ length: 40 }, (_, i) => `${i + 1}.PNG`),
-		"kubiwa": Array.from({ length: 17 }, (_, i) => `${i + 1}.PNG`),
-		"accessory": Array.from({ length: 10 }, (_, i) => `${i + 1}.PNG`),
-		"haikei": Array.from({ length: 10 }, (_, i) => `${i + 1}.PNG`),
+		"kubiwa": Array.from({ length: 18 }, (_, i) => `${i + 1}.PNG`),
+		"accessory": Array.from({ length: 11 }, (_, i) => `${i + 1}.PNG`),
+		"haikei": Array.from({ length: 13 }, (_, i) => `${i + 1}.PNG`),
 		"senga": ["1.PNG"]
 	};
 
